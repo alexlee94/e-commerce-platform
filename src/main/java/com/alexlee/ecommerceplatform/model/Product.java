@@ -1,9 +1,11 @@
 package com.alexlee.ecommerceplatform.model;
 
 import jakarta.persistence.*;
-import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 
-@Data
+@Getter
+@Setter
 @Entity
 @Table(name = "products")
 public class Product {
@@ -18,5 +20,5 @@ public class Product {
     private Double price;
     private Integer stock;
     private String imageUrl;
-
 }
+
