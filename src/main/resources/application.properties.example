@@ -1,0 +1,11 @@
+spring.application.name=e-commerce-platform
+
+spring.datasource.url=jdbc:postgresql://localhost:5432/ecommerce
+spring.datasource.username=your_db_username
+spring.datasource.password=your_db_password
+
+spring.jpa.hibernate.ddl-auto=update
+spring.jpa.show-sql=true
+
+# JWT secret for token generation
+jwt.secret=your_jwt_secret_here
