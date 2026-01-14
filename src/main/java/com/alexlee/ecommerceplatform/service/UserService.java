@@ -1,11 +1,21 @@
 package com.alexlee.ecommerceplatform.service;
 
 import com.alexlee.ecommerceplatform.model.User;
+import com.alexlee.ecommerceplatform.repository.UserRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.Optional;
 
-public interface UserService {
-    Optional<User> findByUsername(String username);
-    User saveUser(User user);
+@Service
+public class UserService {
+
+    @Autowired
+    private UserRepository userRepository;
+
+    public Optional<User> findByUsername(String username) {
+        return userRepository.findByUsername(username);
+    }
 }
+
 
